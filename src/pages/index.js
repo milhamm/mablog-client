@@ -8,7 +8,7 @@ import Button from "../components/Button"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Mablog" />
     <div className="flex container mx-auto lg:mt-2 lg:mt-32 flex-wrap px-6">
       <div className="flex-1 md:flex-2 lg:mr-20">
         <h1 className="text-7xl text-right uppercase font-head tracking-tighter leading-relaxed">
