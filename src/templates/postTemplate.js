@@ -6,6 +6,8 @@ const PostTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
+  console.log(html)
+
   return (
     <Layout isTransparent={true}>
       <div className="blog-post-container">
@@ -25,7 +27,7 @@ const PostTemplate = ({ data }) => {
           <div className="w-full h-screen absolute top-0 bg-black opacity-50"></div>
         </div>
         <div
-          className="container mx-auto my-40"
+          className="container mx-auto my-40 px-3"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Title from "./Title"
 
@@ -17,9 +17,9 @@ const Card = ({
           alt={title}
         />
       </div>
-      <Link to={path}>
+      <AniLink fade to={path}>
         <Title title={title} />
-      </Link>
+      </AniLink>
     </div>
   )
 }

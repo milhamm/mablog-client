@@ -21,7 +21,7 @@ const Post = ({
           Not a bad life
         </h1>
       </div>
-      <div className="container mx-auto p-2 flex flex-wrap">{Posts}</div>
+      <div className="container mx-auto px-1 flex flex-wrap">{Posts}</div>
     </Layout>
   )
 }
