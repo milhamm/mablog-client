@@ -25,7 +25,7 @@ const PostTemplate = ({ data }) => {
           <div className="w-full h-screen absolute top-0 bg-black opacity-50"></div>
         </div>
         <div
-          className="container mx-auto"
+          className="container mx-auto my-40"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>

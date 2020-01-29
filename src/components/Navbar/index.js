@@ -14,7 +14,7 @@ const Navbar = ({ isTransparent = false }) => {
             isTransparent ? "text-white" : "text-black"
           }`}
         >
-          <span className="font-semibold text-xl tracking-tight">Aang</span>
+          <span className="font-sans text-xl tracking-tight">Mablog</span>
         </div>
       </Link>
       <div
@@ -25,7 +25,7 @@ const Navbar = ({ isTransparent = false }) => {
         <div
           className={`font-sans ${isTransparent ? "text-white" : "text-black"}`}
         >
-          <Link to="/post">Link</Link>
+          <Link to="/post">Blog</Link>
         </div>
       </div>
     </nav>
