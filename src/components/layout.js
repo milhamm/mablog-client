@@ -12,8 +12,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "../css/global.css"
 import "./layout.css"
+import Navbar from "./Navbar"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isTransparent }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,24 +25,11 @@ const Layout = ({ children }) => {
     }
   `)
 
-  console.log(data)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Navbar isTransparent={isTransparent} />
+      <div>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
     </>
   )

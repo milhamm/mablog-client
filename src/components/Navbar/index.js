@@ -1,29 +1,34 @@
 import React from "react"
+import { Link } from "gatsby"
 
-const Navbar = () => {
+const Navbar = ({ isTransparent = false }) => {
   return (
-    <ul class="flex h-">
-      <li class="mr-6">
-        <a class="text-blue-500 hover:text-blue-800" href="#">
-          <h1>Active</h1>
-        </a>
-      </li>
-      <li class="mr-6">
-        <a class="text-blue-500 hover:text-blue-800" href="#">
-          Link
-        </a>
-      </li>
-      <li class="mr-6">
-        <a class="text-blue-500 hover:text-blue-800" href="#">
-          Link
-        </a>
-      </li>
-      <li class="mr-6">
-        <a class="text-gray-400 cursor-not-allowed" href="#">
-          Disabled
-        </a>
-      </li>
-    </ul>
+    <nav
+      className={`shadow flex items-center justify-between flex-wrap ${
+        isTransparent ? "bg-transparent" : "bg-white"
+      } p-6 ${isTransparent ? "fixed" : null} z-50 w-full`}
+    >
+      <Link to="/">
+        <div
+          className={`flex items-center flex-shrink-0 ${
+            isTransparent ? "text-white" : "text-black"
+          }`}
+        >
+          <span className="font-semibold text-xl tracking-tight">Aang</span>
+        </div>
+      </Link>
+      <div
+        className={`flex  items-center ${
+          isTransparent ? "text-white" : "text-black"
+        }`}
+      >
+        <div
+          className={`font-sans ${isTransparent ? "text-white" : "text-black"}`}
+        >
+          <Link to="/post">Link</Link>
+        </div>
+      </div>
+    </nav>
   )
 }
 

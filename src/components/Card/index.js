@@ -1,17 +1,25 @@
 import React from "react"
+import { Link } from "gatsby"
+
 import Title from "./Title"
 
-const Card = () => {
+const Card = ({
+  post: {
+    frontmatter: { title, path, thumbnail },
+  },
+}) => {
   return (
     <div className="mb-6 mx-4 lg:flex-3 md:flex-3 sm:flex-2 flex-1">
       <div className="shadow-lg">
         <img
           className="rounded h-40 w-full object-cover"
-          src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-          alt="header"
+          src={thumbnail}
+          alt={title}
         />
       </div>
-      <Title title="Ahoy nibba" />
+      <Link to={path}>
+        <Title title={title} />
+      </Link>
     </div>
   )
 }
